@@ -191,21 +191,22 @@ print(sphere.is_point_inside(point_x, point_y, point_z))
 # TASK 5
 print("TASK 5 \n")
 
+
 class SuperStr(str):
 
     def is_repeatance(self, s):
-        if self == "":
+        if str(self) == "":
             return False
         elif s =="":
             return True
-        elif len(self) % len(s) != 0:
+        elif len(str(self)) % len(s) != 0:
             return False
         else:
-            num_repeats = len(self) // len(s)
-            return self == s * num_repeats
+            num_repeats = len(str(self)) // len(s)
+            return str(self) == s * num_repeats
 
     def is_palindrome(self):
-        if self.lower() == self[::-1].lower():
+        if str(self).lower() == str(self).lower()[::-1]:
             return True
         else:
             return False
